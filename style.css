@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    max-width: 60vw;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.main {
+    background-size: max(100, 100vw);
+    background-image: url("assets/bg.jpg");
+    background-position: center center;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.logo {
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+
+nav div {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: transparent;
+}
+
+.button2 {
+    background-color: red;
+}
+
+.opacity {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+    background-color: black;
+    z-index: 2;
+}
+
+.center {
+    color: white;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    margin-top: max(10vh);
+    transition: all 1s ease-out;
+}
+
+.center .H1,
+.P1,
+.P2,
+.inp {
+    text-align: center;
+    margin-bottom: max(5vh);
+}
+
+.H1 {
+    font-size: 3.02rem;
+    font-weight: 600;
+}
+
+.P1 {
+    font-size: 1.52rem;
+}
+
+.P2 {
+    font-size: 1.25rem;
+}
+
+.inp input {
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    color: white;
+    background-color: rgba(23, 23, 23, 0.7);
+    border-radius: 5px;
+    padding: 0.6rem;
+    padding-right: 3.75rem;
+    box-sizing: border-box;
+}
+
+.inp button {
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: large;
+    margin-left: 0.6rem;
+    cursor: pointer;
+    padding: 0.5rem 1.52rem;
+}
+
+.line {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+}
+
+.section1 {
+    min-height: 75vh;
+    max-width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.section1 .sec1img {
+    position: relative;
+}
+
+.section1 img {
+    height: 400px;
+}
+
+.section1 video {
+    height: 223px;
+    position: absolute;
+    top: 5rem;
+    left: 4.25rem;
+    z-index: -5;
+}
+
+.question {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1.52rem;
+    row-gap: 1.25rem;
+    align-items: center;
+}
+
+.question .box {
+    width: max(60vw);
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.52rem 1.25rem;
+    align-items: center;
+    font-size: x-large;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.question .box:hover {
+    background-color: rgb(109, 108, 108);
+}
+
+.question .box svg {
+    filter: invert(1);
+}
+
+footer {
+    min-height: 40vh;
+    position: relative;
+    padding: 10vh 20vw;
+}
+
+footer .P3 {
+    padding-top: 0.6rem;
+    font-size: large;
+}
+
+footer a {
+    color: white;
+}
+
+footer .boxes {
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+@media screen and (max-width:720px) {
+    .section1 {
+        flex-direction: column;
+        min-height: 60vh;
+    }
+    .section1 .H1 {
+        font-size: 2.1rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .question .H1 {
+        font-size: 2.1rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .question{
+        min-height: 90vh;
+    }
+    .section1 .P1{
+        margin-bottom: 1.5rem;
+    }
+    nav{
+        max-width: 85%;
+    }
+    body {
+        margin: 0;
+    }
+
+    footer {
+        padding: 10vh 10vw;
+    }
+
+    footer .boxes {
+        gap: 1rem;
+        font-size: small;
+    }
+    .section1 .sec1img img{
+        width: 100%;
+        height: 100%;
+    }
+    .section1 .vid video{
+        width: 99%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    .main .center .H1{
+        font-size: 2.5rem;
+    }
+    nav div{
+        gap: 1rem;
+    }
+    .center .inp input{
+        margin-bottom: 1rem;
+    }
+    .center .H1{
+        padding: 1.5rem;
+    }
+}
